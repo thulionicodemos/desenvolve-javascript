@@ -34,7 +34,6 @@ function calcularTempoRestante(dataFutura) {
     const minutos = Math.floor((difData % (1000 * 60 * 60)) / (1000 * 60)); //extraindo e convertendo os minutos
     const segundos = Math.floor((difData % (1000 * 60)) / 1000); //extraindo e convertendo os segundos
 
-
     return {dias, horas, minutos, segundos};
 }
 
@@ -42,13 +41,21 @@ function atualizarTemporizador() {
     const tempoRestante = calcularTempoRestante(dataFutura);
 
     if (tempoRestante) {
+        //Para exibir no terminal
         console.log(`Faltam ${tempoRestante.dias} dias, ${tempoRestante.horas} horas,
             ${tempoRestante.minutos} minutos, ${tempoRestante.segundos} segundos até o ${objetivo}!`);
+            
+        //Para exibir na página web
+        document.getElementById('dias').innerText = `Dias ${tempoRestante.dias}`;
+        document.getElementById('horas').innerText = `Horas ${tempoRestante.horas}`;
+        document.getElementById('minutos').innerText = `Minutos ${tempoRestante.minutos}`;
+        document.getElementById('segundos').innerText = `Segundos ${tempoRestante.segundos} para o ${objetivo}`;
     }
 
     else {
         console.log(`O ${objetivo} já passou!`)
     }
+
 }
 
 //Atualizando o temporizador
