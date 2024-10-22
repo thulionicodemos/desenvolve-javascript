@@ -1,0 +1,33 @@
+<!--Construa uma página HTML com um campo de texto, um botão "Curtir" e um parágrafo que exibe a lista de pessoas que clicaram no botão curtir. Toda vez que se preencher um nome no campo de texto e clicar em curtir, seu código Javascript deve armazenar o nome em um array (verifique se o nome já está lá) e alterar o parágrafo final da página de acordo com as regras:
+
+* Lista vazia: "Ninguém curtiu"
+
+* 1 pessoa curtiu: "[Nome da pessoa] curtiu"
+
+* 2 pessoas curtiram: "[Pessoa 1] e [Pessoa 2] curtiram"
+
+* 3 ou mais pessoas curtiram: 
+"[Pessoa 1], [Pessoa 2] e mais [tamanho da lista - 2] pessoas curtiram" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5.2</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Exercício 5.2 - Eventos</h1>
+    </header>
+    <main>
+        <input type="text" id="texto">
+        <button id="botao1" class="botao">👍Curtir</button>
+        <p id="curtidas">Ninguém curtiu</p>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
