@@ -6,6 +6,7 @@ const mudaTextoTitulo = () => {
     }, 3000)
 }
 mudaTextoTitulo();
+
 //2.1 - Alterar o estilo dos itens da lista.
 const lista = document.getElementById('lista');
 const alteraEstiloLista = () => {
@@ -16,16 +17,13 @@ const alteraEstiloLista = () => {
 alteraEstiloLista();
 
 //3.1 - Adicionar uma classe a todos os parágrafos.
-const paragrafos = document.getElementsByClassName('paragrafo')
-const adicionaClasseAoParagrafo = () => {
-    setTimeout(() => {
-        for (let i = 0; i <= 2; i++) {
-            const listaClasses = paragrafos[i].classList.value;
-            paragrafos[i].classList = listaClasses + ' alterar-paragrafo';
-        }
-    }, 3000)
-}
-adicionaClasseAoParagrafo();
+const paragrafos = document.getElementsByTagName('p')
+
+setTimeout(() => {
+    for (let paragrafo of paragrafos) {
+        paragrafo.classList = 'alterar-paragrafo';
+    }
+}, 3000)
 
 //4.1 - Alterar o texto do botão.
 const botao = document.getElementsByName('botao');
