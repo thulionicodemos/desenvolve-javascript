@@ -19,8 +19,10 @@ alteraEstiloLista();
 const paragrafos = document.getElementsByClassName('paragrafo')
 const adicionaClasseAoParagrafo = () => {
     setTimeout(() => {
-        const listaClasses = paragrafos[0].classList.value;
-        paragrafos[0].classList = listaClasses + ' alterar-paragrafo';
+        for (let i = 0; i <= 2; i++) {
+            const listaClasses = paragrafos[i].classList.value;
+            paragrafos[i].classList = listaClasses + ' alterar-paragrafo';
+        }
     }, 3000)
 }
 adicionaClasseAoParagrafo();
