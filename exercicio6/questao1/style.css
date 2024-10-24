@@ -1,0 +1,37 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#texto {
+    height: 5vh;
+    width: 50vh;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.botao {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 7px;
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 10vh;
+}
+
+#botao1 {
+    margin-right: 20px;
+}
+
+#curtidas {
+    font-size: 20px;
+}
+
+#secao-principal {
+    display: flex;
+    align-items: center;
+}
