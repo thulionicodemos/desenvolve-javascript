@@ -1,0 +1,198 @@
+/* Estilização geral */
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #1a1a1a;
+	color: #f2f2f2;
+	display: flex;
+	justify-content: center;
+}
+
+#feed-container {
+	width: 100%;
+	min-width: 600px;
+	max-width: 600px;
+	margin-top: 20px;
+}
+
+/* Estilização do formulário */
+#form-postagem {
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	top: 0;
+	background-color: #333;
+	padding: 10px;
+	border-bottom: 1px solid #444;
+}
+
+#form-postagem textarea {
+	resize: none;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	margin-bottom: 8px;
+	color: #f2f2f2;
+	background-color: #222;
+}
+
+#form-postagem button {
+	align-self: flex-end;
+	padding: 10px 20px;
+	font-size: 14px;
+	background-color: #d32f2f;
+	color: #f2f2f2;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#form-postagem button:hover {
+	background-color: #b71c1c;
+}
+
+/* Estilização das postagens */
+.postagem {
+	border-bottom: 1px solid #444;
+	padding: 15px;
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	max-width: 100%;
+}
+
+.postagem img.avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.postagem img.gatinho {
+	width: 100%;
+	max-width: 500px;
+	border-radius: 5px;
+	margin-top: 8px;
+}
+
+.cabecalho-postagem {
+	display: flex;
+	align-items: center;
+}
+
+.texto-postagem {
+	margin-top: 5px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
+	width: 100%; /* Garante que o texto ocupe toda a largura do contêiner */
+	max-width: 500px;
+}
+
+.botao-curtir {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	color: #d32f2f;
+	cursor: pointer;
+}
+
+.botao-curtir:hover {
+	color: #7e0c0c;
+}
+
+#botao-like {
+	width: 18px;
+	height: 18px;
+}
+
+/* Media Query para telas entre 481px e 619px */
+@media (max-width: 619px) and (min-width: 481px) {
+	#feed-container {
+		min-width: 470px;
+		max-width: 470px;
+		margin-top: 20px;
+	}
+
+	#form-postagem textarea {
+		font-size: 14px;
+		padding: 8px;
+	}
+
+	#form-postagem button {
+		padding: 8px 15px;
+		font-size: 12px;
+	}
+
+	.postagem {
+		padding: 12px;
+		gap: 10px;
+	}
+
+	.toda-postagem {
+		max-width: 406px;
+	}
+
+	.postagem img.avatar {
+		width: 30px;
+		height: 30px;
+	}
+
+	.texto-postagem {
+		font-size: 14px;
+	}
+
+	.botao-curtir span {
+		font-size: 14px;
+	}
+}
+
+/* Media Query para telas de até 480px (dispositivos mobile) */
+@media (max-width: 480px) {
+	#feed-container {
+		min-width: 415px;
+		max-width: 415px;
+	}
+
+	#form-postagem {
+		padding: 8px;
+	}
+
+	#form-postagem textarea {
+		font-size: 14px;
+		padding: 8px;
+	}
+
+	#form-postagem button {
+		padding: 6px 12px;
+		font-size: 12px;
+	}
+
+	.postagem img.avatar {
+		width: 25px;
+		height: 25px;
+	}
+
+	.toda-postagem {
+		max-width: 346px;
+	}
+
+	.postagem img.gatinho {
+		max-width: 100%;
+	}
+
+	.texto-postagem {
+		font-size: 12px;
+	}
+
+	.botao-curtir {
+		font-size: 12px;
+		gap: 5px;
+	}
+
+	.botao-curtir span {
+		font-size: 12px;
+	}
+}
